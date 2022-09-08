@@ -1,20 +1,24 @@
-version: '1.1.0'
+version: 1.1.1
 history:
-  '1.1.0':
+  1.1.1:
+    date: '2022-09-08'
+    title: Versions
+    description: 'Versions update.'
+  1.1.0:
     date: '2020-06-29'
     title: I18N
     description: 'Add I18N folder.'
-  '1.0.0':
+  1.0.0:
     date: '2019-02-21'
-    title: First version
+    title: 'First version'
     description: 'Manifest created.'
 plugin:
   -
     name: wf/array
-    version: 1.2.0
+    version: 1.2.4
   -
     name: i18n/translate_v1
-    version: 1.7.0
+    version: 1.9.0
 sys:
   -
     name: mercury
