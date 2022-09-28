@@ -17,4 +17,24 @@ class PluginMysqlValidate_date{
     }
     return $form;
   }
+  public function validate_first_day_in_month($field, $form, $data = array()){
+    $form = new PluginWfArray($form);
+    if($form->get("items/$field/is_valid")){
+      if( date('d', strtotime($form->get("items/$field/post_value"))) !='01'){
+        $form->set("items/$field/is_valid", false);
+        $form->set("items/$field/errors/", $this->i18n->translateFromTheme('?label_1 must be first day in a month.', array('?label_1' => $form->get("items/$field/label"))));
+      }
+    }
+    return $form->get();
+  }
+  public function validate_last_day_in_month($field, $form, $data = array()){
+    $form = new PluginWfArray($form);
+    if($form->get("items/$field/is_valid") && $form->get("items/$field/post_value")){
+      if( date('Y-m-t', strtotime($form->get("items/$field/post_value"))) != $form->get("items/$field/post_value")){
+        $form->set("items/$field/is_valid", false);
+        $form->set("items/$field/errors/", $this->i18n->translateFromTheme('?label_1 must be last day in a month.', array('?label_1' => $form->get("items/$field/label"))));
+      }
+    }
+    return $form->get();
+  }
 }

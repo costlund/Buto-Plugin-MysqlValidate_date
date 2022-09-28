@@ -1,5 +1,9 @@
-version: 1.1.1
+version: 1.2.0
 history:
+  1.2.0:
+    date: '2022-09-28'
+    title: Methods
+    description: 'Add methods validate_first_day_in_month and validate_last_day_in_month.'
   1.1.1:
     date: '2022-09-08'
     title: Versions
