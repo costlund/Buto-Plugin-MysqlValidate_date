@@ -1,5 +1,9 @@
-version: 1.2.0
+version: 1.2.1
 history:
+  1.2.1:
+    date: '2023-05-29'
+    title: Versions
+    description: 'Versions update.'
   1.2.0:
     date: '2022-09-28'
     title: Methods
@@ -26,7 +30,7 @@ plugin:
     version: 1.2.4
   -
     name: i18n/translate_v1
-    version: 1.10.0
+    version: 1.11.0
 sys:
   -
     name: mercury
